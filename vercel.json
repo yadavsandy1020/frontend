@@ -19,6 +19,6 @@
     }
   ],
   "env": {
-    "VITE_API_URL": "https://schoolsas-yadavsandy1020s-projects.vercel.app/api"
+    "VITE_API_URL": "https://backend-khaki-zeta-70.vercel.app"
   }
 }
