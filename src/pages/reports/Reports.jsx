@@ -23,7 +23,7 @@ const Reports = () => {
 
   const exportReport = async (type) => {
     try {
-      window.open(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/reports/export/${type}`, '_blank')
+      window.open(`/api/reports/export/${type}`, '_blank')
     } catch (error) {
       console.error('Failed to export report:', error)
     }

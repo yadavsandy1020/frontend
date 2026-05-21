@@ -39,7 +39,7 @@ const InvoiceDetail = () => {
 
   const downloadReceipt = async () => {
     try {
-      window.open(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/fees/invoice/${id}/receipt`, '_blank')
+      window.open(`/api/fees/invoice/${id}/receipt`, '_blank')
     } catch (error) {
       console.error('Failed to download receipt:', error)
     }
