@@ -25,6 +25,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password, tenantId) => {
     try {
       const response = await api.post('/auth/login', { email, password, tenantId })
+      console.log('Login response:', JSON.stringify(response)) // Debug log
       const { token, user: userData } = response.data
 
       localStorage.setItem('token', token)
@@ -35,6 +36,7 @@ export const AuthProvider = ({ children }) => {
       toast.success('Login successful')
       return { success: true }
     } catch (error) {
+      console.error('Login error:', JSON.stringify(error)) // Debug log
       toast.error(error.response?.data?.error || 'Login failed')
       return { success: false, error: error.response?.data?.error }
     }
