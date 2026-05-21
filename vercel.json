@@ -14,10 +14,6 @@
       "handle": "filesystem"
     },
     {
-      "src": "/api/(.*)",
-      "dest": "https://backend-khaki-zeta-70.vercel.app/api/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
